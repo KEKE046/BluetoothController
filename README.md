@@ -1,5 +1,7 @@
 # BluetoothController
 
+[中文README](README.zh.md)
+
 A simple bluetooth remote controller for bluetooth car.
 
 see app/release to download apk.
@@ -41,6 +43,17 @@ void loop() {
 
 The command form, quantification, sending frequency, and control method can be customized is the Settings.
 
+
+# HC-05 Bluetooth Module Connection
+```
+AT+CMODE=1          // enable connection by arbitrary device
+AT+NAME=KEKE046     // set your bluetooth module name
+AT+ROLE=0           // Android phone seems to be always Master Mode
+AT+PSWD=123456      // set password
+```
+
+First pair with the Bluetooth module in the Android Bluetooth settings, and then connect in the software.
+
 # Fast Command
 The L1, L2, R1, R2 buttons at the top can send predefined command conveniently. You can change the default command in the Settings.
 
@@ -58,4 +71,3 @@ Special format may make programming quick:
 `"%2$d, %1$d"` can exchange x and y coordinate, sometimes helps.
 
 `"C%+04d%+04d"` can create a character 'C' in each coordinate message. You can distinguish coordinate message from other command easily.
-
