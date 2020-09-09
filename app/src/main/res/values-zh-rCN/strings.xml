@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main Activity Strings -->
+
+    <string name="welcome_info">
+        欢迎使用蓝牙控制器\n
+        你可以操作左右两个圆盘向蓝牙串口发送坐标信息\n
+        L1, L2, R1, R2是快速命令，可以发送预定义的命令\n
+        最上面的文字框显示的上一个发送的坐标\n
+        在设置里还可以自定义坐标格式：\n
+        \t补全前导零：%+04d,%+04d\n
+        \t添加前缀后缀：pf, %+4d, %+4d, sf\n
+        发送接受时的换行符是\\r\\n\n
+        \n
+        祝你玩得开心！
+    </string>
+
+    <string name="app_name">蓝牙遥控器</string>
+    <string name="last_command_sent">上一个坐标</string>
+    <string name="L1">L1</string>
+    <string name="L2">L2</string>
+    <string name="R1">R1</string>
+    <string name="R2">R2</string>
+    <string name="connect">连接</string>
+    <string name="setting">设置</string>
+    <string name="command">命令</string>
+    <string name="no_blue_tooth_adapter">没有蓝牙适配器</string>
+    <string name="no_connection">没有连接到设备</string>
+    <string name="connection_succeed">连接成功</string>
+
+    <string name="bluetooth_default_uuid">00001101-0000-1000-8000-00805F9B34FB</string>
+    <string name="bluetooth_unable_to_open_socket">无法打开蓝牙套接字</string>
+    <string name="bluetooth_connection_failed">连接失败</string>
+    <string name="bluetooth_unable_to_receive">接收信息失败，可能是蓝牙连接断开</string>
+    <string name="bluetooth_unable_to_send">发送信息失败</string>
+    <string name="bluetooth_no_device">未找到配对的设备</string>
+    <string name="choose_device">选择设备</string>
+    <string name="send_command">发送命令</string>
+    <string name="send_command_button">发送</string>
+    <string name="send_command_cancel">取消</string>
+
+    <!-- Preference Titles -->
+    <string name="title_activity_settings">设置</string>
+    <string name="fast_command_settings">快速命令</string>
+    <string name="control_settings">控制选项</string>
+
+    <string name="line_separator">换行符</string>
+
+    <string name="force_send_command">强制每帧发送命令</string>
+    <string name="force_send_command_off_summary">当方向改变的时候发送命令</string>
+    <string name="force_send_command_on_summary">每一帧都发送命令</string>
+
+    <string name="L1_command_setting">L1命令</string>
+    <string name="L2_command_setting">L2命令</string>
+    <string name="R1_command_setting">R1命令</string>
+    <string name="R2_command_setting">R2 命令</string>
+    <string name="command_format">命令格式</string>
+    <string name="command_format_summary">\'%1$d\' 代表 x 坐标, \'%2$d\' 代表 y 坐标, \'%%\' 代表 \'%\'。更多细节请查看java格式化字符串。</string>
+    <string name="command_format_default">%1$d,%2$d</string>
+    <string name="frequency">发送频率</string>
+    <string name="frequency_summary">发送控制命令的频率</string>
+    <string name="quantification">量化</string>
+    <string name="quantification_summary">如果设置为q，那方向坐标会是 -q 到 +q 之间的整数</string>
+    <string name="separation_control">分离控制</string>
+    <string name="separation_control_off_summary">最终的方向是两个控制盘方向的向量和</string>
+    <string name="separation_control_on_summary">每一个控制盘控制最终方向的一个坐标分量</string>
+    <string name="swapping_control">交换控制</string>
+    <string name="swapping_control_off_summary">左控制盘控制左右，右控制盘控制上下</string>
+    <string name="swapping_control_on_summary">左控制盘控制上下，右控制盘控制左右</string>
+</resources>

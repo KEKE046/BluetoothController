@@ -1,0 +1,73 @@
+<!--
+  ~ Copyright 2018 The app Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory app:title="@string/fast_command_settings">
+        <EditTextPreference
+            app:key="L1"
+            app:title="@string/L1_command_setting"
+            app:defaultValue="L1"/>
+        <EditTextPreference
+            app:key="L2"
+            app:title="@string/L2_command_setting"
+            app:defaultValue="L2"/>
+        <EditTextPreference
+            app:key="R1"
+            app:title="@string/R1_command_setting"
+            app:defaultValue="R1"/>
+        <EditTextPreference
+            app:key="R2"
+            app:title="@string/R2_command_setting"
+            app:defaultValue="R2"/>
+    </PreferenceCategory>
+    <PreferenceCategory app:title="@string/control_settings">
+        <SwitchPreferenceCompat
+            app:key="force_send_command"
+            app:title="@string/force_send_command"
+            app:defaultValue="false"
+            app:summaryOff="@string/force_send_command_off_summary"
+            app:summaryOn="@string/force_send_command_on_summary"/>
+
+        <EditTextPreference
+            app:key="command_format"
+            app:title="@string/command_format"
+            app:summary="@string/command_format_summary"
+            app:defaultValue="@string/command_format_default"/>
+        <EditTextPreference
+            app:key="frequency"
+            app:title="@string/frequency"
+            app:summary="@string/frequency_summary"
+            app:defaultValue="10"/>
+        <EditTextPreference
+            app:key="quantification"
+            app:title="@string/quantification"
+            app:summary="@string/quantification_summary"
+            app:defaultValue="255"/>
+        <SwitchPreferenceCompat
+            app:key="separation_control"
+            app:title="@string/separation_control"
+            app:defaultValue="true"
+            app:summaryOff="@string/separation_control_off_summary"
+            app:summaryOn="@string/separation_control_on_summary"/>
+        <SwitchPreferenceCompat
+            app:key="swapping_control"
+            app:dependency="separation_control"
+            app:title="@string/swapping_control"
+            app:defaultValue="false"
+            app:summaryOff="@string/swapping_control_off_summary"
+            app:summaryOn="@string/swapping_control_on_summary"/>
+    </PreferenceCategory>
+</androidx.preference.PreferenceScreen>
