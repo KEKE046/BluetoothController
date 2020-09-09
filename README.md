@@ -15,19 +15,10 @@ see app/release to download apk.
 The application has two big discs. Every time, the program read the x coordinate of the left disc and y coordinate of the right disc. Then concatenate them together, and send through bluetooth serial. 
 
 The message format looks like `-23,45\r\n`. When controlling a car, you can convert it to the speed of two wheels simply.
-$$
-\begin{cases}
-v_\text{left} - v_\text{right} = 2 x\\
-v_\text{left} + v_\text{right} = 2 y
-\end{cases}
-\quad
-\Rightarrow
-\quad
-\begin{cases}
-v_\text{left} = x + y\\
-v_\text{right} = y - x
-\end{cases}
-$$
+
+![](https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bcases%7Dv_%5Ctext%7Bleft%7D%20-%20v_%5Ctext%7Bright%7D%20%3D%202%20x%5C%5Cv_%5Ctext%7Bleft%7D%20%2B%20v_%5Ctext%7Bright%7D%20%3D%202%20y%5Cend%7Bcases%7D)
+
+![](https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bcases%7Dv_%5Ctext%7Bleft%7D%20%3D%20x%20%2B%20y%5C%5Cv_%5Ctext%7Bright%7D%20%3D%20y%20-%20x%5Cend%7Bcases%7D)
 
 If you are use Arduino, you can use this code to drive you bluetooth car:
 ```c++

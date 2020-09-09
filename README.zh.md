@@ -10,19 +10,9 @@
 
 消息格式看起来像`-23,45 \ r \ n`。 控制小车时，您可以简单地将其转换为两个车轮的速度。
 
-$$
-\begin{cases}
-v_\text{left} - v_\text{right} = 2 x\\
-v_\text{left} + v_\text{right} = 2 y
-\end{cases}
-\quad
-\Rightarrow
-\quad
-\begin{cases}
-v_\text{left} = x + y\\
-v_\text{right} = y - x
-\end{cases}
-$$
+![](https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bcases%7Dv_%5Ctext%7Bleft%7D%20-%20v_%5Ctext%7Bright%7D%20%3D%202%20x%5C%5Cv_%5Ctext%7Bleft%7D%20%2B%20v_%5Ctext%7Bright%7D%20%3D%202%20y%5Cend%7Bcases%7D)
+
+![](https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bcases%7Dv_%5Ctext%7Bleft%7D%20%3D%20x%20%2B%20y%5C%5Cv_%5Ctext%7Bright%7D%20%3D%20y%20-%20x%5Cend%7Bcases%7D)
 
 如果您使用的是Arduino，则可以使用以下代码来驱动蓝牙小车：
 ```c++
